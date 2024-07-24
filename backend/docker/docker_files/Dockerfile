@@ -1,12 +1,12 @@
-FROM python:3.10
+FROM python:3.12.2
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN set -e; \
-    apt-get update ;\
-    apt-get -y install netcat ;\
-    apt-get -y install gettext ;
+apt-get update ;\
+apt-get -y install netcat-traditional;\ 
+apt-get -y install gettext ;
 
 RUN mkdir /code
 COPY . /code/
